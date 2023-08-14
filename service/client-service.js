@@ -16,10 +16,18 @@ const listaClientes = () =>
     })
     .then(respuesta => respuesta.json()); // Aquí convertimos la respuesta a JSON y retornamos la promesa
   }
+
+  const eliminarCliente = (id) => {
+    console.log("Vas a eliminar cliente:", id);
+    return fetch (`http://localhost:3000/perfil/${id}`, {
+      method: "DELETE"
+    })
+  }
   
   export const clientServices = {
     listaClientes,
-    crearCliente
+    crearCliente,
+    eliminarCliente
   }
 
   
