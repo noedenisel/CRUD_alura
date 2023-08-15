@@ -1,5 +1,7 @@
 import { clientServices } from "../service/client-service.js";
 
+const formulario = document.querySelector("[data-form]")
+
 const obtenerInformacion = () => {
     const url = new URL(window.location)
     console.log(url.searchParams.get("id"));
@@ -25,3 +27,21 @@ const obtenerInformacion = () => {
 }
 
 obtenerInformacion()
+
+formulario.addEventListener("submit", ( event ) => {
+    event.preventDefault()
+
+    const url = new URL(window.location)
+    console.log(url.searchParams.get("id"));
+    const id = url.searchParams.get("id")
+
+    const nombre = document.querySelector("[data-nombre]").value
+    const email = document.querySelector("[data-email]").value
+    
+    console.log(nombre, "-", email);
+
+    clientServices.actualizarCliente(nombre, email, id)
+        .then(()=>{
+            window.location.href= "../screens/edicion_concluida.html"
+        })
+})
