@@ -1,19 +1,14 @@
 {
   "perfil": [
     {
-      "nombre": "Prueba 1",
+      "nombre": "Noelia",
+      "email": "mail@cliente.com",
+      "id": 1
+    },
+    {
+      "nombre": "Cliente 123",
       "email": "cliente@cliente.com",
-      "id": "206eece4-0410-4dba-9c2b-15aea494f567"
-    },
-    {
-      "nombre": "Prueba 2",
-      "email": "cliente2@cliente.com",
-      "id": "1ceacb05-1710-4a01-a98f-23326b7e8d90"
-    },
-    {
-      "nombre": "Cliente Prueba 3",
-      "email": "clienteprueba@clienteprueba.com",
-      "id": "ddbcaeae-2d83-41e3-9622-609ecfd9023a"
+      "id": "b5340681-51c0-4db5-b248-03bfc5d7f815"
     }
   ]
 }

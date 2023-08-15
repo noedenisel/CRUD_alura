@@ -1,8 +1,6 @@
 import { clientServices } from "../service/client-service.js";
 
-
 console.log(clientServices)
-
 
 const crearNuevaLinea = (nombre, email, id) => {
   console.log(id)
@@ -16,7 +14,7 @@ const crearNuevaLinea = (nombre, email, id) => {
         <ul class="table__button-control">
           <li>
             <a
-              href="../screens/editar_cliente.html"
+              href="../screens/editar_cliente.html?id=${id}"
               class="simple-button simple-button--edit"
             >
               Editar
