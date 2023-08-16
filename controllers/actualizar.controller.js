@@ -2,7 +2,7 @@ import { clientServices } from "../service/client-service.js";
 
 const formulario = document.querySelector("[data-form]")
 
-const obtenerInformacion = () => {
+const obtenerInformacion = async() => {
     const url = new URL(window.location)
     console.log(url.searchParams.get("id"));
     
@@ -18,12 +18,11 @@ const obtenerInformacion = () => {
     const email = document.querySelector("[data-email]")
     console.log(nombre, "-", email);
 
-    clientServices.detalleCliente(id)
-        .then(perfil=>{
-            console.log(perfil)
-            nombre.value = perfil.nombre
-            email.value = perfil.email
-        })
+    const perfil = await  clientServices.detalleCliente(id)
+
+    nombre.value = perfil.nombre
+    email.value = perfil.email
+      
 }
 
 obtenerInformacion()
